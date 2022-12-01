@@ -23,7 +23,6 @@ st.markdown(
     "using **Python** and **OpenCV**."
 )
 
-
 # ---------- Sidebar section ------------
 # bounding box thickness
 bbox_thickness = 3
@@ -102,7 +101,7 @@ if uploaded_file is not None:
         else:
             # draw face
             facedraw = draw_faces(img, faces)
-            
+
             i = 1
             for face in faces:
                 marks = detect_marks(img, landmark_model, face)
