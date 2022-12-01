@@ -161,11 +161,11 @@ if uploaded_file is not None:
 
                 # print('div by zero error')
                 if ang1 >= 48:
-                    st.write("Head down")
+                    st.subheader("Person looking at the BELOW")
                     cv2.putText(img, 'Head down', (30, 30),
                                 font, 2, ybox_color, bbox_thickness)
                 elif ang1 <= -48:
-                    st.write("Head up")
+                    st.subheader("Person looking at the ABOVE")
                     cv2.putText(img, 'Head up', (30, 30),
                                 font, 2, ybox_color, bbox_thickness)
 
@@ -174,12 +174,12 @@ if uploaded_file is not None:
                     cv2.putText(img, 'Head right', (30, 60),
                                 font, 2, ybox_color, bbox_thickness)
                 elif ang2 <= -48:
-                    st.write("Head left")
+                    st.subheader("Person looking at the LEFT")
                     cv2.putText(img, 'Head left', (90, 30),
                                 font, 2, ybox_color, bbox_thickness)
 
                 if -47 <= ang1 <= 47 & -47 <= ang2 <= 47:
-                    print('Head forward')
+                    st.subheader("Person looking at the FORWARD")
                     cv2.putText(img, 'Head forward', (90, 30),
                                 font, 2, ybox_color, bbox_thickness)
 
